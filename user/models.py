@@ -8,3 +8,6 @@ class User(models.Model):
 
     def __str__(self) -> str:
         return self.last_name + " " + self.name
+
+    def say_hi(self) -> str:
+        return f"Hi, {self.name}"
