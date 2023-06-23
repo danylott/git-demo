@@ -4,6 +4,7 @@ from django.db import models
 class User(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
+    image = models.ImageField(...)
 
     def __str__(self) -> str:
         return self.name
@@ -13,3 +14,6 @@ class User(models.Model):
             return f"Hi, {self.name}"
 
         return f"Hello, {self.name}"
+
+    def say_hello(self) -> str:
+        return f"Hello, {self.name}. How're you?"
